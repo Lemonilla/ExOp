@@ -30,3 +30,11 @@
 *.exe
 *.out
 *.app
+
+*.tlog
+*.log
+*.enc
+*.ibd
+*.pdb
+*.vcxproj
+*.vcxproj.*
