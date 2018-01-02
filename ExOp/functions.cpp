@@ -76,3 +76,14 @@ void readDataAt(uint32_t keyRegister, uint32_t returnRegister)
 	if (n == NULL) setRegister(returnRegister, -1);
 	setRegister(returnRegister, n->value);
 }
+
+void clearData()
+{
+	node* tmp;
+	while (head != NULL)
+	{
+		tmp = head->next;
+		delete head;
+		head = tmp;
+	}
+}

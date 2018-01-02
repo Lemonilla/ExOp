@@ -1,0 +1,18 @@
+
+Opcode Documentation
+
+0xF9FC
+ExOp_clear_memory
+This clears all values stored from memory.  It is important to run this at startup to make sure that leftover data from other quests does not effect your quest.  Data is persistent between rooms, but not between client restarts and is not character bound.
+
+0xF9FD
+ExOp_store_memory R1, R2
+ExOp allows for data to be stored and loaded from memory.  Up to 4294967295 values can be stored.  Each value stored in a unique location given by R1.  If data (in R2) has already been stored at R1 then the data is overwritten.
+
+0xF9FE
+ExOp_load_memory R3, R4
+This opcode sets the contents of R4 equal to the data stored with the key in R3.  If no data has been stored with the key R3 the value 0xFFFFFFFF (-1) is instead put in R4.
+
+0xF9FF 
+ExOp_get_version R1
+This opcode sets R1 to the version of ExOp being used.  This allows for programmers to know what functions are available to them and can abort the quest without crashing the client if the functions they need are not available.

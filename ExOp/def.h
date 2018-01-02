@@ -1,6 +1,8 @@
 #ifndef DEFINITIONS
 #define DEFINITIONS
 
+#include <stdint.h>
+
 // Game Addresses
 #define OPCODE_TLB_BASE_ADDR 			0x009CCC00
 #define OPCODE_TLB_CALLBACK_ADDR		0x009CCC04
@@ -30,9 +32,10 @@ typedef struct
 	uint32_t functionPtr;
 } opcodeInsert;
 
-typedef struct
+typedef struct node
 {
-	node* next, prev;
-	uint32_t key, value;
+	struct node* next;
+	uint32_t key;
+	uint32_t value;
 } node;
 #endif
