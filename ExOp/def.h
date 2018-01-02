@@ -7,7 +7,7 @@
 #define REGISTER_PTR					0x00A954B0
 
 // Misc
-#define PTR_SIZE 						sizeof(void*)
+#define PTR_SIZE 						sizeof(uint32_t)
 #define DLL_VERSION						1
 
 // Error Codes
@@ -29,4 +29,10 @@ typedef struct
 	uint32_t argumentSetup;
 	uint32_t functionPtr;
 } opcodeInsert;
+
+typedef struct
+{
+	node* next, prev;
+	uint32_t key, value;
+} node;
 #endif
