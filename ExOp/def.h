@@ -22,14 +22,11 @@
 #define ARGUMENTS_RR					0x006B1058
 
 // Types
-typedef unsigned int uint;
 typedef struct
 {
-	uint table;
-	uint code;
-	uint argumentSetup;
-	uint functionPtr;
+	uint32_t table;
+	uint32_t code;
+	uint32_t argumentSetup;
+	uint32_t functionPtr;
 } opcodeInsert;
-
-
 #endif
