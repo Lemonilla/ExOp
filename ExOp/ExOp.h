@@ -7,5 +7,5 @@
 #define EXOP_API __declspec(dllimport)
 #endif
 
-extern "C" EXOP_API uint init();
-extern "C" EXOP_API void getVersionNumber(uint reg);
+extern "C" EXOP_API uint32_t Init();
+extern "C" EXOP_API void getVersionNumber(uint32_t reg);
